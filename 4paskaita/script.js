@@ -1,4 +1,4 @@
-console.log('Ketvirta paskaita, for ciklai')
+// console.log('Ketvirta paskaita, for ciklai')
 
 // i ++ prideda 1
 // i = i + 1;
@@ -82,9 +82,64 @@ console.log('Ketvirta paskaita, for ciklai')
 // }
 // do...while ciklas pirmiausia įvykdys kūną, tada patikrins būklę ir, kol tai tiesa, vėl ir vėl ją vykdys.
 
-let i = 0;
-do {
-console.log(i);
-i++;
-} while (i < 3);
+// let i = 0;
+// do {
+// console.log(i);
+// i++;
+// } while (i < 3);
 
+// let x = 9;
+// while ( x >=1 ){
+//     console.log("hello" + x);
+//     x = x - 1;
+// }
+
+//  const start = 1;
+//  const count = 0;
+
+//  let result = ' ';
+//  for (let i = 9; i > count; i--){
+//      console.log(`${"Hello"}`+ i);
+//  }
+
+
+//  for (let i= 2; i < 11; i +=2){
+//      console.log(i)
+//  }
+
+let laugh = 'ha';
+let times = '4';
+
+function getLaugh(times){
+    let result = " ";
+    for(let i = 0; i < times; i++) result +="Ha";
+        return result + "!";
+       
+    }
+    console.log(getLaugh(4));
+
+
+       // NAMU DARBAI
+       
+    //Stulpelis
+
+// const name = 'Jurga';
+// let i = 3;
+// while (i > 0) {
+//   console.log(name);
+//   i--;
+// }
+
+    //Eilute
+
+// let combo = '';
+// const name = 'Jurga';
+// let times = 3;
+// do {
+//   combo += name;
+//   times--;
+// } while (times > 0);
+// console.log(combo);
+
+// const math = Math.cos(0);
+// console.log(math);
