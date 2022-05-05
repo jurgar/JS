@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="alert('Jurga')">Alert your name</button>
+    <script>
+      document.querySelector("button").addEventListener("click", sayName);
+      function sayName() {
+        document.querySelector("h1").textContent = "Hello";
+      }
+    </script>
+  </body>
+</html>
