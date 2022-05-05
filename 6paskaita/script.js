@@ -63,47 +63,73 @@ const myName = "Jurga";
 // }
 // square(10);
 
-function square (number) {
-    return number * number;
-}
+// function square (number) {
+//     return number * number;
+// }
 
 
-const squareNumber = square(5);
-console.log(squareNumber);
+// const squareNumber = square(5);
+// console.log(squareNumber);
 
-function logger(value){
-    console.log(value);
-}
-const loggerValue = logger('Testing..');
+// function logger(value){
+//     console.log(value);
+// }
+// const loggerValue = logger('Testing..');
 
-logger(10);
+// logger(10);
 
-function printAllArrayItems(array){
-    for (let i=0; i<array.length; i++){
-        const item = array[i];
-        console.log(item);
+// function printAllArrayItems(array){
+//     for (let i=0; i<array.length; i++){
+//         const item = array[i];
+//         console.log(item);
 
-    }
-}
-const students = ["Edvinas", "Liudmila", "Julija", "Rokas", "Asta"];
-printAllArrayItems(students);
+//     }
+// }
+// const students = ["Edvinas", "Liudmila", "Julija", "Rokas", "Asta"];
+// printAllArrayItems(students);
 
-function repeatString(string, count){
-    let finalString = "";
+// function repeatString(string, count){
+//     let finalString = "";
 
-    for(let i = 0; i < count; i ++){
-        finalString +=string;
-    }
-    return finalString;
-}
-const repeatedString = repeatString("Rokas", 5);
-console.log(repeatedString);
+//     for(let i = 0; i < count; i ++){
+//         finalString +=string;
+//     }
+//     return finalString;
+// }
+// const repeatedString = repeatString("Rokas", 5);
+// console.log(repeatedString);
 
-function addition(a, b){
-    return a+b;
-}
+// function addition(a, b){
+//     return a+b;
+// }
 
-function substracion(a,b){
-    return a-b;
-}
-console.log(addition(5,4,))
+// function substracion(a,b){
+//     return a-b;
+// }
+// console.log(addition(5,4,))
+
+// let name = 'Jurga';
+// function alertName(name) {
+//     alert(name);
+//   }
+//   console.log(name);
+
+
+//   function generateRandomNumber() {
+//     return Math.floor(Math.random() * 5) + 1;
+//   }
+//   generateRandomNumber(1);
+
+
+// function getNameAndSurnameLength(name, surname) {
+//     return name.length + surname.length;
+//   }
+//   getNameAndSurnameLength('John', 'Snow');
+
+// function getLetterByIndex(index) {
+//     const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+//     return alphabet[index];
+//   }
+//   getLetterByIndex(0);
+
+  
