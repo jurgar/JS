@@ -1,19 +1,19 @@
-const form = document.querySelector('form');
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+// const form = document.querySelector('form');
+// form.addEventListener('submit', (event) => {
+//   event.preventDefault();
 
-  const years = document.getElementById('years').value;
+//   const years = document.getElementById('years').value;
 
-  let bonus = 50;
-  if (years >= 10) {
-    bonus += 50;
-  }
-  if (years >= 20) {
-    bonus += 100;
-  }
+//   let bonus = 50;
+//   if (years >= 10) {
+//     bonus += 50;
+//   }
+//   if (years >= 20) {
+//     bonus += 100;
+//   }
 
-  document.getElementById('output').innerText = `Jūsų premija: ${bonus}`;
-})
+//   document.getElementById('output').innerText = `Jūsų premija: ${bonus}`;
+// })
 
 
 
@@ -82,20 +82,20 @@ form.addEventListener('submit', (event) => {
 
 
 
-// function drawTriangle(event) {
-//     event.preventDefault();
-//     let triangleSize = Number(document.getElementById('triangleSize').value);
-//     const outputElement = document.getElementById('output');
+function drawTriangle(event) {
+    event.preventDefault();
+    let triangleSize = Number(document.getElementById('triangleSize').value);
+    const outputElement = document.getElementById('output');
   
-//     let output = '';
-//     for (i = 0; i < triangleSize; i++) { 
-//       for (j = 0; j <= i; j++) {
-//         output += "*";
-//       }
-//       output += "<br>";
-//       outputElement.innerHTML = output;
-//     }
-//   }
+    let output = '';
+    for (i = 0; i < triangleSize; i++) { 
+      for (j = 0; j <= i; j++) {
+        output += "*";
+      }
+      output += "<br>";
+      outputElement.innerHTML = output;
+    }
+  }
   
-//   document.querySelector('form').addEventListener('submit', drawTriangle);
+  document.querySelector('form').addEventListener('submit', drawTriangle);
   
