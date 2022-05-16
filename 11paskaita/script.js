@@ -40,7 +40,7 @@ const candle= {
         }else{
             return 45;
         }
-    }
+    },
 };
 
 // candle.turnLight();
@@ -53,16 +53,19 @@ const cat = {
     age: 15,
     color: "black",
     weight: 7,
-    eat: () => {console.log(`${cat.name} is eating... `)},
-    sleep: () => console.log ("Cat is eating... "),
+    eat: (food) =>{
+     console.log(`${cat.name} is eating ${foog}... `);
+    },
+    sleep: () => {
+        console.log ("Cat is sleeping... ");
+    },
     description:() => {
         console.log(`${cat.name} is a ${cat.color} cat and ${cat.age} age`);
-
     },
 };
 
 // console.log(`${cat.name} is a ${cat.color} cat and ${cat.age} age`);
-// cat.description();
+// cat.eat("fish");
 
 const codeClass = {
     type: "remote",
@@ -85,7 +88,7 @@ const studentsCount = codeClass.students.length;
 
 // console.log(codeClass.type);
 
-codeClass = "onsite";
+// codeClass = "onsite";
 
 const student = {} ;
 // console.log(students.name)
