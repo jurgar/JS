@@ -103,24 +103,34 @@ names [0]= "Rokas";
 // console.log(names);
 
 
-const treeForm= document.getElementById("tree-form");
+const treeForm = document.getElementById("tree-form");
 
-treeForm.addEventListener("submit",handleSubmitTreeForm )
-function handleSubmitTreeForm(event){
-    event.preventDefault();
+treeForm.addEventListener("submit", handleSubmitTreeForm);
 
-    const treeName = document.querySelector("input[name='tree-name']");
-    const treeAge = document.querySelector("input[name='tree-age']");
-    
-    const treeName = treeName.value;
-    const age = Number(treeAge.value);
-    
-    const tree = {
-        name: name,
-        age: age,
-        isOld: age > 100 ? true : false, 
-        // isOld:age >100,
-    };
-    console.log(tree);
+function handleSubmitTreeForm(event) {
+
+event.preventDefault();
+
+
+const treeName = document.querySelector("input[name='tree-name']");
+const treeAge = document.querySelector("input[name='tree-age']");
+
+
+
+const name = treeName.value;
+const age = Number(treeAge.value);
+
+
+
+const tree = {
+name: name,
+age: age,
+isOld: age > 100 ? true : false,
+
+// isOld: age > 100,
+
+};
+
+console.log(tree);
 }
 
