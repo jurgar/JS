@@ -107,17 +107,14 @@ names [0]= "Rokas";
 
 
 const treeForm = document.getElementById("tree-form");
-
 treeForm.addEventListener("submit", handleSubmitTreeForm);
 
 function handleSubmitTreeForm(event) {
-
 event.preventDefault();
 
 
 const treeName = document.querySelector("input[name='tree-name']");
 const treeAge = document.querySelector("input[name='tree-age']");
-
 
 
 const name = treeName.value;
