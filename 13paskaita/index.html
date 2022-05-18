@@ -7,6 +7,119 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <form>
+      <input type="number" id="price" step="0.001" placeholder="Price" />
+      <input type="number" id="quant" step="0.1" placeholder="Quantity" />
+      <button type="submit">Calc</button>
+    </form>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Pasiimant input value, visada paduoda string. Nepamirštame konveruoti į skaičių su Number()
+        const price = Number(document.getElementById("price").value);
+        const quant = Number(document.getElementById("quant").value);
+
+        const total = price * quant;
+
+        const priceDisplay = document.createElement("h1");
+        priceDisplay.textContent = total.toFixed(2);
+        document.body.append(priceDisplay);
+      });
+    </script>
+    <!-- kita uzduotis -->
+    <form>
+      <input type="text" id="name" placeholder="Name" />
+      <input type="number" id="quant" step="0.1" placeholder="Quantity" />
+      <button type="submit">Display</button>
+    </form>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const quant = Number(document.getElementById("quant").value);
+
+        if (Number.isInteger(quant)) {
+          const h1 = document.createElement("h1");
+          h1.textContent = name.repeat(quant);
+          document.body.append(h1);
+        } else {
+          alert("Number is not an integer");
+        }
+      });
+    </script>
+    <!-- kita uzduotis -->
+
+    <form>
+      <input type="text" id="name" placeholder="Name" />
+      <button type="submit">Find length</button>
+    </form>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Visą magiją daro .trim()
+        const name = document.getElementById("name").value.trim();
+
+        alert("Length: " + name.length);
+      });
+    </script>
+
+    <!-- kita uzduotis -->
+
+    <form>
+      <input type="text" id="fullname" placeholder="Full Name" />
+      <button type="submit">Find Name, Surname</button>
+    </form>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Ir toliau naudojame trim(), kad išventume bėdų
+        const fullName = document
+          .getElementById("fullname")
+          .value.trim()
+          .split(" ");
+
+        const name = document.createElement("h1");
+        name.textContent = fullName[0];
+
+        const surname = document.createElement("h1");
+        surname.textContent = fullName[1];
+
+        document.body.append(name, surname);
+      });
+    </script>
+
+    <!-- kita uzduotis -->
+
+    <form>
+      <input type="text" id="fullname" placeholder="Full Name" />
+      <button type="submit">Find Name, Surname</button>
+    </form>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const fullName = document.getElementById("fullname").value.trim();
+
+        const name = document.createElement("h1");
+        name.textContent = fullName.split(" ")[0];
+
+        const surname = document.createElement("h1");
+        // Vardą+Pavardę paėmus, pakeičiame vardą - tarpeliu (ir nutriname vieną tarpelį). Paliekame visą kitą.
+        surname.textContent = fullName.replace(name, "").slice(1);
+
+        document.body.append(name, surname);
+      });
+    </script>
+
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -64,7 +64,6 @@ console.log(lowerCased);
 //patikrtina ar stringai yra vienodi (not)
 function areSameString(firstString, secondString){
     return firstString.toUpperCase() === secondString.toUpperCase();
-
 }
 //console.log(areSameString("Rokas","rokas"));
 
@@ -89,3 +88,28 @@ const countries = countryInput.split(", ");
 
 console.log(tags);
 console.log(countries);
+
+
+const isLegalAge = true;
+
+console.log(isLegalAge); // Atvaizduos kaip boolean
+console.log(isLegalAge.toString()); // Atvaizduos kaip string
+
+
+const milkPrice = 3.49; // Vėliau pakeisti kainą į 3
+
+if (Number.isInteger(milkPrice)) {
+  alert("Centų nereikia")
+} else{
+  alert("Centų prireiks...")
+}
+
+const milkPrice = 3.677; // Vėliau pakeisti kainą į 3
+
+if (Number.isInteger(milkPrice)) {
+  alert("Centų nereikia")
+} else{
+  alert("Centų prireiks...")
+}
+
+alert(milkPrice.toFixed(2))
