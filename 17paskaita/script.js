@@ -126,7 +126,7 @@ const data = [
     {id:49,first_name:"Robinson",gender:"Non-binary",car_model:"Dakota",car_year:1992,shirt_size:"XS"},
     {id:50,first_name:"Nerissa",gender:"Male",car_model:"F150",car_year:2002,shirt_size:"3XL"}
 ];
-
+// Pasakykite skaičių kiek vyrų yra tarp šių duomenų (t.y. console'log skaičių).
 const femaleCount = (array)=> {
     const persons = array.filter(person => person.gender ==="Female");
     return persons.length;
