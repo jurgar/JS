@@ -1,3 +1,18 @@
+// pratimai 
+// const p1 = new Person("Petras", 16)
+// p1.compareAge() => "Petras is old enough to drink";
+
+// class Person {
+// 	constructor(name, age) {
+// 		this.name = name;
+// 		this.age = age;
+// 	}
+
+// 	compareAge(other) {
+// 		// Rašyti kodą čia
+// 	}
+// }
+
 class Cat {
     constructor(name, weight) {
         this.name = name;
@@ -7,7 +22,6 @@ class Cat {
     isFat() {
         if(this.weight >=5){
             return `${this.name} yra storas kaciukas`;
-
         } else {
                 return `${this.name} yra plonas kaciukas`;
         }
@@ -18,7 +32,11 @@ const cat = new Cat ("Kleopatras", 7);
 // console.log(cat.isFat());
 
 
-// pvz: finally([1, 5, "a", "g", "2", 6]) =>[1,5,6]
+
+// 2. Parašykit funkciją, kuri priimtu mąsyvą sudarytą iš skaičių ir raidžių.
+// Grąžinkite masyvą tik su skaičiais.
+
+// pvz: finally([1, 5, "a", "g", "z", 6]) =>[1,5,6]
 //arr.filter (x=>isNaN(x))
 
 const randomArray = [1,5, "a", "g", "z", 6];
