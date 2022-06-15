@@ -6,10 +6,19 @@ const renderTodo = (todo) => {
   const todoStatus = document.createElement("span");
 
   todoEl.className = "todo";
-  todoTitle.className = "todo-title";
+  todoTitle.className = completed ? "todo-title done" : "todo-title";
   todoStatus.className = completed ? "todo-status done" : "todo-status";
 
   todoTitle.textContent = title;
+
+  todoStatus.addEventListener("click", () => {
+    // console.log(completed);
+    todoStatus.classList.toggle("done");
+    todoTitle.classList.toggle("done");
+    todoStatus.completed = !todoStatus.completed;
+
+    // console.log(todoStatus.completed);
+  });
 
   todoEl.append(todoTitle, todoStatus);
   document.querySelector(".todo-container").prepend(todoEl);
@@ -63,22 +72,20 @@ addButton.addEventListener("click", handleAddTodo);
 // Pakeisti teksto sviesuma/tamsuma kai yra done/undone
 // Follow dizaina, datas: menesis, diena, metai
 
-
 fetch("https://olive-bead-glazer.glitch.me")
-.then((resp) => resp.json())
-.then((response) => {
-console.log(response);
+  .then((resp) => resp.json())
+  .then((response) => {
+    console.log(response);
+  })
 
-})
-
-.catch((error) => {
-console.error(error);
-});  
+  .catch((error) => {
+    console.error(error);
+  });
 
 const createTableSkeleton = () => {
-  const id = document.createElement('th');
-  id.innerText = 'Brand';
+  const id = document.createElement("th");
+  id.innerText = "Brand";
 
-  const image = document.createElement('th');
-  image.innerText = 'Model';
-}
+  const image = document.createElement("th");
+  image.innerText = "Model";
+};
