@@ -1,6 +1,7 @@
 // const userName = "Jurga";
 // const goodbye = "Viso gero" + " " + userName + " " + "lauksime sugrįžtant !";
 // console.log(goodbye);
+
 // //geresnis variantas
 
 // const goodbye = `Viso gero ${userName}, lauksime sugrįžtant!`;
@@ -11,12 +12,14 @@
 // console.log(`$${salary}`);
 
 // const price = 10;
+// 1.
 
 // if (price >= 10) {
 //   console.log("Perku");
 // } else {
 //   console.log("Neperku");
 // }
+
 // arba;
 
 // let result = "";
@@ -80,3 +83,5 @@ const result =
     : "Naktis";
 
 console.log(result);
+
+const myName = Jurgita;
