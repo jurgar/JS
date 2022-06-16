@@ -84,4 +84,17 @@ const result =
 
 console.log(result);
 
-const myName = Jurgita;
+const myName = "Jurgita";
+const count = myName.length;
+console.log(count);
+
+for (let i = 0; i < 1; i++) {
+  console.log(myName.charAt(0));
+}
+for (let i = 7; i > 6; i--) {
+  console.log(myName.charAt(6));
+}
+
+for (let i = 0; i < 7; i++) {
+  console.log(i + 1, myName.charAt(i));
+}
