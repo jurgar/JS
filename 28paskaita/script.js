@@ -1,5 +1,5 @@
 const renderCard = (product) => {
-  const { image, price, title } = product;
+  const { id, image, price, title } = product;
 
   const card = document.createElement("div"); // <div>
   const imageEl = document.createElement("img"); // <img />
@@ -15,6 +15,20 @@ const renderCard = (product) => {
   titleEl.textContent = title; // <p>{title}</p>
   priceEl.textContent = price; // <h5>{price}</p>
   deleteButton.textContent = "Istrinti"; // <button>Istrinti</button>
+
+  deleteButton.addEventListener("click", () => {
+    console.log(id);
+    const params = { method: "DELETE" };
+    fetch(`https://golden-whispering-show.glitch.me/${id}`, params)
+      .then((resp) => resp.json())
+      .then((response) => {
+        console.log(response);
+        location.reload();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
 
   card.append(imageEl, titleEl, priceEl, deleteButton);
   // <div class="card">
