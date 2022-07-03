@@ -15,12 +15,17 @@ const handleSubmitCar = (event) => {
       "Content-type": "application/json; charset=UTF-8",
     },
   };
+
   fetch("https://olive-bead-glazer.glitch.me", params)
     .then((resp) => resp.json())
     .then((response) => {
+      // viskas gerai
+      // isskviesk funkcija kuri parodys sekmes pranesima
       console.log(response);
     })
     .catch((error) => {
+      // kazkas negerai
+      // iskviesk funkcija kuri parodys nesekmes pranesima
       console.error(error);
     });
 };

@@ -104,43 +104,62 @@
 // console.log(doubledItems);
 // console.log(colors);
 
-// uzduotis
+// 1. uzduotis
 // istrinti zalia ir balta naudojant slice methoda.
 
-// const colors = ["red", "blue", "green", "white", "black", "yellow", "purple"];
+const colors = ["red", "blue", "green", "white", "black", "yellow", "purple"];
 
-// prideti oranzine spalva vietoj juodos, naudojnat spice
-// const colorsList = colors.splice(4, 4, "orange");
+function removeGreenAndWhite(colorArray) {
+  const sliced = colorArray.slice(0, 2);
+  const sliced2 = colorArray.slice(-3);
+  const combine = sliced.concat(sliced2);
+  return combine;
+}
 
-// function removeSomeColor(array) {
-//   return array.splice(2, 2);
-// }
+const modifiedColors = removeGreenAndWhite(colors);
 
-// removeSomeColor(colors);
-// console.log(colors);
+// 2.prideti oranzine spalva vietoj juodos, naudojnat spice
+
+function addOrange(colorArray) {
+  colorArray.splice(2, 1, "orange");
+}
+
+addOrange(modifiedColors);
 
 // function removeSomeColor(array) {
 //   return array.splice(4, 1, "orange");
 // }
 
-// removeSomeColor(colors);
-// console.log(colors);
-
-//uzduotis
+//3. uzduotis
 //isfiltruoti reiksmes kurios turi raide "e"
 
-const colors = ["red", "blue", "green", "white", "black", "yellow", "purple"];
+const hasEchar = modifiedColors.filter((color) => color.includes("e"));
+// "red".includes("e") => true
+// "blue".includes("e") => true
+console.log("hasEchar", hasEchar);
 
-//NEPADARYTA
+//4. uzduotis
+// isfiltruoti kurioe turi maziau negu 4 raides
 
-// function letterE() {
-//     const letters = colors;
-// }
-// console.log(colors.find((e) => e.charAt(0) === e.charAt(0).toLowerCase(e)));
-// console.log(colors.find((element) => element == "e"));
+const shorterThan4Chars = modifiedColors.filter((color) => color.length < 4);
+// "red".length < 4 => 3 < 4 => true
+// "blue".length < 4 => 4 < 4 => false
+// "orange".length < 4 => 6 < 4 => false
+console.log("shorter than 4 chars", shorterThan4Chars);
 
-// const lettersCount = (array) => {
-//   const letters = array.filter(letter === "e");
-//   return letters.lenght;
-// };
-// console.log(lettersCount(colors));
+//5.uzduotis  ar turi kas nors is ju raide "z"
+
+const hasZChar = modifiedColors.some((color) => color.includes("z"));
+console.log("has Z char", hasZChar);
+// "red".includes("z") => false
+// "blue".includes("z") => false
+
+//6.
+
+const hasBrownValue = modifiedColors.some((color) => color === "brown");
+console.log("has brown", hasBrownValue);
+
+const hasALetter = modifiedColors.filter((color) => color.includes("a"));
+const aLetterCount = hasALetter.length;
+
+console.log("has A letter", aLetterCount);

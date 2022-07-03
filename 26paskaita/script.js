@@ -1,53 +1,47 @@
-const renderCar = (user) => {
-    const brand = user.brand;
-    const model = user.model;
+const createCar = (car) => {
+  const { brand, model } = car;
 
-    const tdBrand = document.createElement('td');
-    const tdModel = document.createElement('td');
+  const tdBrand = document.createElement("td");
+  const tdModel = document.createElement("td");
 
-    tdBrand.textContent = brand;
-    tdModel.textContent = model;
+  tdBrand.textContent = brand;
+  tdModel.textContent = model;
 
-    const trUser = document.createElement('tr');
-    trUser.append(tdBrand, tdModel);
+  const trCar = document.createElement("tr");
+  trCar.append(tdBrand, tdModel);
 
-    return trUser;
+  return trCar;
 };
-const renderTable = (users) => {
-        
-    const thBrand = document.createElement('th');
-    const thModel = document.createElement('th');
 
-    thBrand.textContent ='BRAND';
-    thModel.textContent ='MODEL';
+const renderTable = (cars) => {
+  const thBrand = document.createElement("th");
+  const thModel = document.createElement("th");
 
-    const thRow = document.createElement('tr');
-    const thead = document.createElement('thead');
-    const table = document.createElement('table');
+  thBrand.textContent = "BRAND";
+  thModel.textContent = "MODEL";
 
-    thRow.append(thBrand, thModel);
-    thead.append(thRow);
-    table.append(thead);
+  const thRow = document.createElement("tr");
+  const thead = document.createElement("thead");
+  const table = document.createElement("table");
 
-    const tableBody = document.createElement('tbody');
-    
-    users.forEach(user => tableBody.append(renderCar(user)));
+  thRow.append(thBrand, thModel);
+  thead.append(thRow);
+  table.append(thead);
 
-    table.append(tableBody);
+  const tableBody = document.createElement("tbody");
 
-    document.body.append(table);
+  cars.forEach((car) => tableBody.append(createCar(car)));
 
-}
+  table.append(tableBody);
+
+  document.body.append(table);
+};
+
 fetch("https://olive-bead-glazer.glitch.me")
-
-    .then((resp) => resp.json())
-    .then(response => {
-      renderTable(response);
-    })
-    .catch((error) => {
-    console.error(error, ': failed to load');
-
-    });  
-
-
-
+  .then((resp) => resp.json())
+  .then((response) => {
+    renderTable(response);
+  })
+  .catch((error) => {
+    console.error(error, ": failed to load");
+  });
