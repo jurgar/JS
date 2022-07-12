@@ -17,7 +17,7 @@ const createUserRow () =(user) =>{
     const tdFavColor= document.createElement("td");
     
     tdId.textContent = user.id;
-    tdName = textContent = user.name;
+    tdName.textContent = user.name;
     tdCity.textContent = user.city;
     tdFavColor.textContent = user.fav_color;
 
